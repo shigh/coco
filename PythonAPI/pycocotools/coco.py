@@ -46,9 +46,6 @@ __version__ = '2.0'
 
 import json
 import time
-import matplotlib.pyplot as plt
-from matplotlib.collections import PatchCollection
-from matplotlib.patches import Polygon
 import numpy as np
 import copy
 import itertools
@@ -236,6 +233,11 @@ class COCO:
         :param anns (array of object): annotations to display
         :return: None
         """
+        
+        import matplotlib.pyplot as plt
+        from matplotlib.collections import PatchCollection
+        from matplotlib.patches import Polygon
+
         if len(anns) == 0:
             return 0
         if 'segmentation' in anns[0] or 'keypoints' in anns[0]:
